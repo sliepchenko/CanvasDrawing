@@ -65,7 +65,9 @@ class ToolsPanel extends EventTarget {
 
             'background-color': '#FFFFFF',
             'border-width': '2px',
-            'border-radius': '25px'
+            'border-radius': '25px',
+
+            'z-index': 999
         });
         document.body.appendChild(this.#containerNode);
 
@@ -173,7 +175,9 @@ class Canvas extends EventTarget {
         this.#canvasNode.style.assign({
             position: 'absolute',
             top: 0,
-            right: 0
+            right: 0,
+
+            'z-index': 999
         });
         this.#canvasNode.addEventListener('mousedown', this.#onPointerDown);
         this.#canvasNode.addEventListener('touchstart', this.#onPointerDown);
